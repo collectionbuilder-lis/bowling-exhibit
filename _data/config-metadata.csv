@@ -2,14 +2,16 @@ field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
 date,Date,,,DCTERMS.date,,
 description,Description,,,DCTERMS.description,description
-subject,Subjects,,,DCTERMS.subject,keywords
+subjects,Subjects,true,,DCTERMS.subject,keywords
 location,Location,,,,contentLocation
-source,Source,,,,
 resourceType,Resource Type,,,DCTERMS.type,,
-resourceFormat,Resource Format,,,,,
-resourceSize,Resource Dimensions,,,,,
+format,Resource Format,,,DCTERMS.format,,
 itemType,Item Type,,,,,
-itemSize,Item Dimensions,,,,,
-language,Language,,,DCTERMS.language,,
-rightsText, Rights,,,,,
-rightsURL,Rights Statement,,true,DCTERMS.rights,license
+itemDescription, Item Description,,,,,
+language, Language,,,,,
+notes, Notes,,,,,
+creator, Creator,,,,,
+source,Source,,,,
+rightsStatement,Rights Statement,,,DCTERMS.rights,license
+rightsURI,Rights URI,,true,DCTERMS.rights,license
+additionalRightsInfo, Additional Rights Information,,,DCTERMS.rights,license
