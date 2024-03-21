@@ -2,7 +2,7 @@ field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
 date,Date,,,DCTERMS.date,,
 description,Description,,,DCTERMS.description,description
-subjects,Subjects,true,,DCTERMS.subject,keywords
+subject,Subjects,true,,DCTERMS.subject,keywords
 location,Location,,,,contentLocation
 resourceType,Resource Type,,,DCTERMS.type,,
 format,Resource Format,,,DCTERMS.format,,
