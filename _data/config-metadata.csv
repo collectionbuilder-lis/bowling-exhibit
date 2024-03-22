@@ -12,6 +12,6 @@ language, Language,,,,,
 notes, Notes,,,,,
 creator, Creator,,,,,
 source,Source,,,,
-rightsStatement,Rights Statement,,,DCTERMS.rights,license
+rights,Rights,,,DCTERMS.rights,license
 rightsURI,Rights URI,,true,DCTERMS.rights,license
-additionalRightsInfo, Additional Rights Information,,,DCTERMS.rights,license
+rightsNote,Rights Note,,,DCTERMS.rights,license
