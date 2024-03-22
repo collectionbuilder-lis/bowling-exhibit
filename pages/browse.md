@@ -1,5 +1,5 @@
 ---
-title: Browse
+title: Browse the Collection
 layout: browse
 permalink: /browse.html
 ---
