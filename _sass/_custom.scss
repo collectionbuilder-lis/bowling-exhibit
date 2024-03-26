@@ -23,3 +23,23 @@ p, dd {
 .bg-opacity-85 {
     --bs-bg-opacity: 0.85;
 }
+
+#numberOf {
+    font-weight: 700;
+}
+
+#browseItems .card-title {
+    font-weight: 600;
+}
+
+.card-footer a:hover {
+    text-decoration: underline!important;
+}
+
+.language-alert a:hover {
+    text-decoration: underline;
+}
+
+/**#browse-the-collection {
+    font-size: 3em;
+}**/

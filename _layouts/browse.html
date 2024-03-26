@@ -4,32 +4,45 @@ layout: page
 custom-foot: js/browse-js.html
 ---
 
+<div class="row my-2">
+    <div class="alert alert-primary d-flex align-items-center language-alert" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        <div>&nbsp;Statement on <a href="#" class="alert-link">outdated and potentially harmful language</a></div>
+      </div>
+</div>
+
 {{ content }}
 
-<div class="row mb-3 justify-content-center">
-    <div class="col-md-8 text-center">
+<div class="row mt-4 mb-3 justify-content-center">
+    <div class="col text-center">
         <form role="search" id="lunrSearch" onsubmit="submitFilter(); return false;">
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control" id="filterTextBox" placeholder="Filter ... " aria-label="Search"> 
-                <button class="btn btn-success" type="submit" title="Filter items" id="filterButton" >Search</button>
+                <input type="text" class="form-control" id="filterTextBox" placeholder="Search or filter ... " aria-label="Search"> 
+                <button class="btn btn-primary" type="submit" title="Filter items" id="filterButton" >Search</button>
                 <button class="btn btn-outline-secondary filter" onclick="resetFilter(); return false;" data-filter="">Reset</button>
             </div>
         </form>
-        <div class="h2" id="numberOf"></div>
     </div>
-    <div class="col-md-2">
-        <div class="dropdown">
-            <button class="btn btn-secondary mt-1 dropdown-toggle" type="button" id="browseSortButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sort by <span id="sortFilter">Date</span>
-            </button>
-            <div class="dropdown-menu browse-sort-menu" aria-labelledby="browseSortButton">
-                <button class="dropdown-item browse-sort-item active" data-filter="date">Date</button>
-                <button class="dropdown-item browse-sort-item" data-filter="title">Title</button>
-                <button class="dropdown-item browse-sort-item" data-filter="random">Random</button>
-                {% assign sort_options = site.data.config-browse | where_exp: 'i','i.sort_name != nil' %}
-                {% for o in sort_options %}
-                <button class="dropdown-item browse-sort-item" data-filter="{{ o.field | escape }}">{{ o.sort_name }}</button>
-                {% endfor %}
+    <div class="row px-0 mt-5">
+        <div class="col-md-9">
+            <div class="h4" id="numberOf"></div>
+        </div>
+        <div class="col-md-3 text-end">
+            <div class="dropdown">
+                <button class="btn btn-secondary mt-1 dropdown-toggle" type="button" id="browseSortButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort by <span id="sortFilter">Date</span>
+                </button>
+                <div class="dropdown-menu browse-sort-menu" aria-labelledby="browseSortButton">
+                    <button class="dropdown-item browse-sort-item active" data-filter="date">Date</button>
+                    <button class="dropdown-item browse-sort-item" data-filter="title">Title</button>
+                    <button class="dropdown-item browse-sort-item" data-filter="random">Random</button>
+                    {% assign sort_options = site.data.config-browse | where_exp: 'i','i.sort_name != nil' %}
+                    {% for o in sort_options %}
+                    <button class="dropdown-item browse-sort-item" data-filter="{{ o.field | escape }}">{{ o.sort_name }}</button>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
