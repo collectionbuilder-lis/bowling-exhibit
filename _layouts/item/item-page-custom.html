@@ -11,10 +11,10 @@ item-meta: true
     <!-- <div class="my-0 h5 small">{{ page.display_template | replace: "_", " " | upcase }} {% if page.display_template == "compound_object" or page.display_template == "multiple" %}{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %} ({{ children | size }} Items){% endif %}</div> -->
     
     <div class="row">
-        <div class="col-8">
+        <div class="col-md-7">
             {{ content }}
         </div>
-        <div class="col-4">
+        <div class="col-md-5">
             <h2 class="mb-3">{{ page.title }}</h2>
             <div id="metadata">
                 {% include item/metadata.html %}
