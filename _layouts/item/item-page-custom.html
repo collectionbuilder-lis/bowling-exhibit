@@ -17,7 +17,27 @@ item-meta: true
         <div class="col-md-5">
             <h2 class="mb-3">{{ page.title }}</h2>
             <div id="metadata">
-                {% include item/metadata.html %}
+                <p class="h4"><b>Date: </b> {{page.date}}</p>
+                <p class="h4"><b>Description: </b> {{page.description}}</p>
+                
+                <div class="accordion my-4" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         Item Metadata
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            {% include item/metadata.html %}
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+                
+
             </div>
             {% if page.rights or page.rightsstatement %}
             <div>
