@@ -48,7 +48,7 @@ function makeCard(obj) {
     
     // set equal heights top image for items with image
     if(imgSrc) {
-        card += '<img class="card-img-top lazyload" style="height: 300px; object-fit: cover; object-position: top center;" src="' + placeholder + '" data-src="' + imgSrc + '" alt="' + imgAlt + '">';
+        card += '<a href="' + itemHref + '"><img class="card-img-top lazyload" style="height: 300px; object-fit: cover; object-position: top center;" src="' + placeholder + '" data-src="' + imgSrc + '" alt="' + imgAlt + '"></a>';
     }
 
     //card body
@@ -91,7 +91,7 @@ function makeCard(obj) {
     // card += '<hr><a href="' + itemHref + '" class="btn btn-sm btn-light" title="link to ' + obj.title + '">View Full Record</a>';
 
     // view item link
-    card += '<div class="card-footer"><a href="' + itemHref + '" class="stretched-link" title="link to ' + obj.title + '">View Item</a></div>';
+    card += '<div class="card-footer"><a href="' + itemHref + '" title="link to ' + obj.title + '">View Item</a></div>';
 
     // close divs
     card += '</div></div></div>';
