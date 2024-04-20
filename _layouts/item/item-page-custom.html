@@ -17,14 +17,14 @@ item-meta: true
         <div class="col-md-5">
             <h2 class="mb-3">{{ page.title }}</h2>
             <div id="metadata">
-                <p class="h4"><b>Date: </b> {{page.date}}</p>
-                <p class="h4"><b>Description: </b> {{page.description}}</p>
-                
+                <p class="h5">{{page.date}}</p>
+                <p>{{page.description | truncatewords: 30 }}</p>
+                <p><a href="{{ page.rightsURI }}" target="_blank"><img src="{{ page.rightsIcon }}" class="copyright-icon-item" alt="{{ page.rights }} button" aria-label="{{ page.rights }} button" title="{{ page.rights }}"></a></p>
                 <div class="accordion my-4" id="accordionExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                         Item Metadata
+                         All Metadata
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
